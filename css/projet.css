@@ -1,0 +1,651 @@
+ 
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
+}
+
+header {
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-repeat:no-repeat;
+ }
+ 
+
+ .navbar {
+    background-color:  black;
+    position: relative; /* Relative position for the sticky effect */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    font-size: 17px;
+    z-index: 2;
+}
+    .navbar.sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration:none;}
+
+    .navbar img {
+        font-size: 1em;
+        width: 150px;
+        height: 70px;
+        margin-left: 30px;
+    }
+    .navbar .nav-links ul {
+        display: flex;
+    }
+
+        .navbar .nav-links ul li {
+            margin: 0 25px;
+            transition: color 0.3s ease;
+        }
+
+            .navbar .nav-links ul li.active a {
+                color:#dfb16d;
+                font-weight: 600;
+            }
+
+    .navbar .menu-hamburger {
+        display: none;
+        position: absolute;
+        right: 30px;
+        width: 35px;
+    }
+    nav ul li a:hover {
+        color: gray;
+        text-decoration:none;
+    }
+
+
+
+.masection {
+    text-align: center;
+    padding: 120px;
+    margin-top: -550px;
+ 
+    
+}
+
+    .masection h1 {
+        font-size: 50px;
+        color: rgb(14, 13, 13);
+        
+    }
+
+    .masection p {
+        color: rgb(24, 24, 24);
+        font-size: 28px;
+    }
+  
+
+
+@media screen and (max-width: 901px) {
+    .navbar {
+        padding: 0;
+    }
+    .navbar a {
+        color: black;
+    }
+
+        .navbar .logo {
+            position: absolute;
+            top: 45px;
+       
+
+        }   
+
+        .navbar .menu-hamburger {
+            display: block;
+            width: 50px
+        }
+
+    .nav-links {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.20);
+        backdrop-filter: blur(2px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+
+        .nav-links.mobile-menu {
+            margin-left: 0;
+        }
+
+        .nav-links ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    .navbar .nav-links ul li {
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+    
+
+
+    /*dggg*/
+
+    /* Responsive */
+
+    .container{
+        flex-wrap:wrap;
+    }
+
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formulaire,
+    .infos {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+/* Carousel Container */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+    /* Carousel Images */
+    .carousel .slide img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+         display: block;
+        
+    }
+
+    /* Slides */
+    .carousel .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1s ease;
+    }
+
+        /* Active Slide */
+        .carousel .slide.active {
+            opacity: 1;
+        }
+.text h1{
+font-size: 70px;
+}
+    /* Text Overlay */
+    .text {
+       
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 20px;
+        text-align: center;
+      background-color: rgba(0, 0, 0, 0.4);
+        padding: 20px;
+        border-radius: 10px;
+        opacity: 0;
+        animation: fadeIn 1.5s ease forwards;
+    }
+
+ 
+
+
+
+
+.justifytext {
+    text-align: center; /* Justifie le texte */
+    font-size: 16px; /* Taille de police */
+    line-height: 1.5; /* Hauteur de ligne pour une meilleure lisibilit� */
+    margin: 20px; /* Marges autour du texte */
+    width: 45%;
+    animation: slideInFromLeft 5s forwards;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeInText 4s forwards;
+}
+
+    .justifytext h1 {
+        font-size: 50px;
+        margin-left: 40px;
+        margin-bottom: 30px;
+        color:#dfb16d;
+    }
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 50px;
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+/* Wrapper des images */
+.imagewrap {
+    position: relative;
+    width: 50%;
+    max-width: 500px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 100px;
+}
+
+/* Style des images */
+.image {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease-in-out;
+    opacity: 0;
+
+}
+
+.image1 {
+    width: 100%;
+    max-width: 400px; /* Taille de l'image principale */
+    height: auto;
+    position: relative;
+    z-index: 1;
+    animation: fadeInImage 1s forwards 0.5s;
+}
+
+.image2 {
+    width: 90%; /* Plus petite taille pour l�image superpos�e */
+    max-width: 300px;
+    height: auto;
+    position: absolute;
+    bottom: -150px; /* D�calage vers le bas */
+    left: -40px; /* D�calage vers la gauche */
+    z-index: 0;
+    opacity: 0.9;
+    animation: fadeInImage 1s forwards 0.7s;
+}
+
+/* Animation d'apparition du texte */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animation des images */
+@keyframes fadeInImage {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.textappart {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    padding: 40px;
+}
+
+/* Style du titre */
+.titre {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Décoration élégante sous le titre */
+.titre-decoration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.ligne {
+    width: 50px;
+    height: 2px;
+    background-color: #dfb16d;
+}
+
+.icon {
+    width: 12px;
+    height: 12px;
+    background-color: #dfb16d;
+    border-radius: 50%;
+}
+.imgdeco {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 50px;
+}
+
+    .imgdeco img {
+        object-fit: cover;
+        height: 100%;
+        width: 50%;
+    }
+/* Style du texte */
+.description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+/* Style de base pour le footer */
+.footer {
+    background-color: black;
+    color: black;
+    padding: 40px 0;
+    flex-wrap: wrap;
+}
+.color{
+    color: white;
+    margin-top: 2%;
+    font-size: 12px;
+   
+    
+}
+
+.container2 {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Permet aux �l�ments de se r�organiser sur les petits �crans */
+    
+}
+
+/* Formulaire */
+.formulaire {
+    flex: 1;
+    margin-right: 20px; /* Espacement entre le formulaire et les infos */
+    background-color: whitesmoke;
+    margin-left: 10px;
+    padding: 15px;
+    border-radius: 05px;
+}
+
+    .formulaire h1 {
+        font-size: 25px;
+        text-align: center;
+        color: #dfb16d;
+    }
+
+.form :where(.input-box input, .select-box) {
+    position: relative;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+
+.form .column {
+    display: flex;
+    column-gap: 15px;
+}
+
+.input-box input:focus {
+    box-shadow: 0 1px � rgba(0, 0, 0, 0.1);
+}
+
+.form .gender-box {
+    margin-top: 20px;
+}
+
+.gender-box h3 {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: auto;
+}
+
+.form :where(.gender-option,.gender) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 1px;
+}
+
+.form .gender {
+    column-gap: 5px;
+}
+
+.gender input {
+    accent-color: rgb(150, 150, 155);
+}
+
+.form :where(.gender input, .gender label) {
+    cursor: pointer;
+}
+
+.gender label {
+    color: #999797;
+}
+
+.adress :where(input, .select-box) {
+    margin-top: 20px;
+}
+
+.select-box select {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #7c1d1d;
+    font-size: 1rem;
+}
+
+.form button {
+    height: 55px;
+    width: 30%;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 400;
+    transition: all 0.2s ease;
+    background-color: #dfb16d;
+}
+
+    .form button:hover {
+        background-color: rgb(44, 43, 48);
+    }
+
+.formulaire header {
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form {
+    max-width: 100%;
+    margin-left: 60px;
+}
+
+.input-box {
+    margin-bottom: 20px;
+}
+
+    .input-box label {
+        display: block;
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    .input-box input {
+        width: 80%;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        font-size: 1rem;
+        color: black;
+    }
+
+
+    .input-box textarea {
+        height: 150px; /* Plus grande zone pour le message */
+        resize: vertical; /* Permet de redimensionner verticalement */
+        width: 80%;
+        border-radius: 5px;
+    }
+
+button {
+    width: 20%;
+    padding: 10px;
+    background-color: #dfb16d;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+    button:hover {
+        background-color: #777;
+    }
+
+/* Informations */
+
+
+
+.infos {
+    max-width: 350px;
+    flex: 1;
+    margin-left: 20px;
+}
+
+    .infos h3 {
+        font-size: 1.5rem;
+        color: #dfb16d;
+        margin-bottom: 20px;
+    }
+
+
+.contacteznous {
+    display: flex; /* Active Flexbox */
+    justify-content: space-between; /* Espace entre les images */
+
+    gap: 10px; /* Espace entre les images */
+    /* flex-wrap: wrap; Permet aux images de passer à la ligne sur les petits écrans */
+    max-width: 100%; /* S'assure que le conteneur ne dépasse pas la largeur de l'écran */
+}
+
+.imagecontact {
+    flex: 1 1 45%; /* Définit une largeur flexible pour chaque image */
+    text-align: center; /* Centre le texte sous les images */
+    box-sizing: border-box; /* Inclut le padding et les bordures dans la largeur totale */
+}
+
+    .imagecontact img {
+        width: 100%; /* Prend toute la largeur de son conteneur (flex) */
+        max-width: 150px; /* Limite la largeur maximale de l'image */
+        height: auto; /* Garde les proportions des images */
+        border-radius: 5px; /* Ajoute des coins arrondis */
+    }
+
+
+.infos p {
+    font-size: 1rem;
+    color: #ccc;
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .contacteznous {
+        flex-direction: column; /* Empile les images sur petits écrans */
+    }
+
+    .imagecontact {
+        flex: 1 1 100%; /* Chaque image prend toute la largeur disponible */
+    }
+
+        .imagecontact img {
+            max-width: 120px; /* Réduit la taille maximale sur petits écrans */
+        }
+}
+
+.infos p {
+    font-size: 1rem;
+    color: #ccc;
+    margin: 5px 0;
+}
+
+
+.transition {
+    opacity: 0; /* Commence avec une opacit� de 0 (invisible) */
+    transform: translateY(20px); /* D�placer le texte vers le bas */
+    transition: opacity 1s ease, transform 1s ease; /* Transition pour opacit� et mouvement */
+ 
+}
+    .transition.visible {
+        opacity: 1; /* Rendre le texte visible */
+        transform: translateY(0); /* Remettre le texte � sa position d'origine */
+    }
+

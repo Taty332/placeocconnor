@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/formulaire.css">
+</head>
+<body>
+    <header>
+        <!-- Ajout de l'id "navbar" pour cibler l'élément avec JavaScript -->
+        <nav id="navbar" class="navbar">
+            <div>
+                <a href="index.html"><img src="image/lOGO.png" alt="Logo"></a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Le Projet</a></li>
+                    <li><a href="appt-alouer.html">Appartements à louer</a></li>
+                    <li><a href="Quartier.html">Quartier</a></li>
+                    <li class="active"><a href="formulaire.html">Contact</a></li>
+                    <li><a href="#">EN</a></li>
+                </ul>
+            </div>
+            <img src="image/Menu2 (2).png" alt="menu hamburger" class="menu-hamburger">
+        </nav>
+    </header>
+    
+        <div class="text">
+          <a href="#text"><p><h1><strong>Contactez-Nous</strong></h1></p>
+         </a> </div> 
+    
+
+   
+    <section  id="text" class="container">
+        <form action="#" class="form">
+            <div class="gender-box">
+                <h3>Grandeur recherchée</h3>
+                <div class="gender-option">
+                    <div class="gender">
+                        <input type="radio" id="check-male" name="gender" checked />
+                        <label for="check-male">Studio</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" id="check-female" name="gender" />
+                        <label for="check-female">3 1/2</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" id="check-female" name="gender" />
+                        <label for="check-female">4 1/2</label>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="input-box">
+                <label for="">Nom Complet</label>
+                <input type="text" placeholder="Entrer le Nom Complet" required />
+            </div>
+
+            <div class="input-box">
+                <label for="">Courriel</label>
+                <input type="text" placeholder="Entrer l'adresse courriel" required />
+            </div>
+
+            <div class="column">
+                <div class="input-box">
+                    <label for="">Téléphone</label>
+                    <input type="number" placeholder="Entrer le numero de Téléphone" required>
+                </div>
+            </div>
+            <div class="input-box adress">
+                <label for="">Message</label>
+                <textarea id="labelmessage" placeholder="Entrer votre message" required></textarea>
+
+            </div>
+            <button>Envoyer</button>
+        </form> 
+    </section>
+    <script>
+        // Sélection de la barre de navigation
+        const navbar = document.getElementById("navbar");
+        const sticky = navbar.offsetTop;
+
+        // Fonction pour ajouter ou retirer la classe "sticky" lors du scroll
+        window.onscroll = function () {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        };
+
+        // Activation du menu hamburger pour les écrans mobiles
+        const menuHamburger = document.querySelector(".menu-hamburger");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuHamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('mobile-menu');
+        });
+
+    </script>
+
+    <footer>
+    </div>
+    <p class="color">Place O'Connor 2024 | Toutes les images et finis présentés dans ce site web sont à titre indicatif seulement et sujettes à changement sans préavis. Politique de confidentialité.
+    </p>
+</footer>
+</body>
+</html>
