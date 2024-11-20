@@ -259,6 +259,12 @@ nav ul li a:hover {
     align-items: center;
     font-size: 15px;
     color:#404040;
+    border-left: 5px solid #dfb16d;
+    box-shadow: -3px 0 5px rgba(0, 0, 0, 0.2);
+    padding : 15px;
+    line-height: 1.5;
+   
+
 }
 /*FIN les paragraphes et leurs titres*/
 
@@ -322,6 +328,9 @@ nav ul li a:hover {
     }
     .titre_paragraphe{
         text-align: left;
+}
+.paragraphe{
+    hyphens: auto;
 }
 }
 /* FIN RESPONSVE 1*/

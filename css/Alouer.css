@@ -201,6 +201,23 @@ header {
             max-width: 500px; 
             
         }
+        .montexte2{
+            text-align: justify; /*mettre le text a gauche  */
+        word-spacing: normal;
+        hyphens: auto;
+        width: 100%; /* Largeur de l'élément prend 100% de la largeur de l'écran */
+        }
+        .montexte p{
+      text-align: justify; /*mettre le text a gauche  */
+        word-spacing: normal;
+        hyphens: auto;
+        width: 100%; /* Largeur de l'élément prend 100% de la largeur de l'écran */
+        }
+        .montexte h3{
+            font-size: 20px;
+        }
+
+
         }
         
     
@@ -451,23 +468,9 @@ th img {
 }
 /* Navigation Arrows */
 .carousel .prev, .carousel .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: white;
-    font-size: 1rem;
-    padding: 10px;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.5);
-    border:none;
-    outline:none;
+  
 }
-.carousel .prev {
-    left: 10px;
-}
-.carousel .next {
-    right: 10px;
-}
+ 
 
 .text a{
     text-decoration: none;
@@ -860,7 +863,7 @@ button {
     display: flex; /* Active Flexbox */
     justify-content: space-between; /* Espace entre les images */
 
-    gap: 10px; /* Espace entre les images */
+    gap: 35%; /* Espace entre les images */
     /* flex-wrap: wrap; Permet aux images de passer à la ligne sur les petits écrans */
     max-width: 100%; /* S'assure que le conteneur ne dépasse pas la largeur de l'écran */
 }
@@ -928,7 +931,9 @@ button {
     text-align: justify;
     z-index: 2; /* Assure que le texte est en dessous de l'image */
 }
-
+.montexte p{
+    width: 50%;
+}
 
 /* Image avec superposition */
 .image {
@@ -1004,6 +1009,7 @@ button {
     font-size: 16px;
     line-height: 1.6;
     margin-top: 20px;
+    text-align: justify;
    
 }
 

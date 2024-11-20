@@ -18,9 +18,11 @@ body {
 header {
     height: 100vh;
     width: 100vw;
+    background-size: contain;/* Pour que l'image soit entièrement visible */
     background-size: cover;
     background-repeat:no-repeat;
     background: url(../image/entete-contact.jpg);
+    margin: 0;
     
  }
  /* Barre de navigation */
@@ -117,14 +119,23 @@ text-decoration: none;
 
  
 .container {
-    max-width: 700px;
-    width: 90%; /* Utilisation de 90% pour qu'elle s'adapte aux tailles d'écran */
-    margin: 20px auto;
+      /* Utilisation de 90% pour qu'elle s'adapte aux tailles d'écran */
+   margin-left: 5%;
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 5%;
+     margin-top: 5%;
+    margin-right: 5%;
+  background-color: #F5F5F5;
+ 
 }
-
+.form{
+  
+    width: 50%;
+padding: 2%;
+}
     .container h1{
         text-align:center;
         color: #dfb16d;
@@ -204,14 +215,56 @@ text-decoration: none;
     border-radius: 6px;
     font-weight: 400;
     transition: all 0.2s ease;
-    background-color:#dfb16d;
+    background-color: rgb(44, 43, 48);
 }
 
     .form button:hover {
-        background-color: rgb(44, 43, 48);
+        background-color: #E5E4E2;
+        color: #000;
     }
 
-
+    .infos {
+        max-width: 350px;
+        flex: 1;
+        margin-left: 20px;
+       
+    }
+    
+        .infos h3 {
+            font-size: 1.5rem;
+            color: #dfb16d;
+            margin-bottom: 20px;
+        }
+    
+    
+    .contacteznous {
+        display: flex; /* Active Flexbox */
+        justify-content: space-between; /* Espace entre les images */
+    
+        gap: 35%; /* Espace entre les images */
+        /* flex-wrap: wrap; Permet aux images de passer à la ligne sur les petits écrans */
+        max-width: 100%; /* S'assure que le conteneur ne dépasse pas la largeur de l'écran */
+    }
+    
+    .imagecontact {
+        flex: 1 1 45%; /* Définit une largeur flexible pour chaque image */
+        text-align: center; /* Centre le texte sous les images */
+        box-sizing: border-box; /* Inclut le padding et les bordures dans la largeur totale */
+    }
+    
+        .imagecontact img {
+            width: 100%; /* Prend toute la largeur de son conteneur (flex) */
+            max-width: 150px; /* Limite la largeur maximale de l'image */
+            height: auto; /* Garde les proportions des images */
+            border-radius: 5px; /* Ajoute des coins arrondis */
+        }
+    
+    
+    .infos p {
+        font-size: 1rem;
+        color: black;
+        margin: 5px 0;
+    }
 
 
 
@@ -240,12 +293,7 @@ footer {
         color: black;
     }
 
-        .navbar .logo {
-            position: absolute;
-            top: 45px;
-       
-
-        }   
+      
 
         .navbar .menu-hamburger {
             display: block;
@@ -303,12 +351,23 @@ footer {
     margin-bottom: 16%;
    }
 
-   .text{
+   .text h1{
     
-    font-size: 1rem;    
+      font-size: 30px;
  }
-
  
+
+ .contacteznous {
+    flex-direction: column; /* Empile les images sur petits écrans */
+}
+
+.imagecontact {
+    flex: 1 1 100%; /* Chaque image prend toute la largeur disponible */
+}
+
+    .imagecontact img {
+        max-width: 120px; /* Réduit la taille maximale sur petits écrans */
+    }
 
     footer {
         font-size: 14px;

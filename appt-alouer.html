@@ -16,7 +16,6 @@
             <!-- Ajout de l'id "navbar" pour cibler l'élément avec JavaScript -->
 
             <nav id="navbar" class="navbar">
-
                 <div>
                     <a href="index.html"><img src="image/lOGO.png" alt="Logo"></a>
                 </div>
@@ -40,7 +39,7 @@
             <div class="slide active">
                 <img src="image/maison1.jpg">
                 <div class="text">
-                    <h1>Place <strong>O'Connor </strong> </h1>
+                    <h1>Place O'Connor </h1>
                     <br> Decouvrez des appartements confortables à des prix imbattables <br><br> DISPONIBLE DÉS MAINTENANT
                     <br> <br> <a href="#contact">CONTACTEZ NOUS  </a><br>
 
@@ -68,8 +67,7 @@
             </div>
 
             <!-- Navigation Buttons -->
-            <div class="prev" onclick="moveSlide(-1)">&#10094;</div>
-            <div class="next" onclick="moveSlide(1)">&#10095;</div>
+          
         </div>
         <!--  image immeuble avec tableau -->
 
@@ -1342,15 +1340,16 @@
         <div class="conteneur">
             <div class="montexte">
                 <h3>
-                    LOUER UN APPARTEMENT NEUF ?
+                    <strong>LOUER UN APPARTEMENT ?</strong>
                 </h3>
                 <p>
-                    Place O'Connor propose une gamme variée de configurations<br> pour répondre à vos besoins : studio, 3 ½ ou 4 ½. <br>Vous trouverez un logement adapté à votre <br>style de vie et à votre budget.
+                    Place O'Connor propose une gamme variée de configurations pour répondre à vos besoins : studio, 3 ½ ou 4 ½.  Vous trouverez un logement adapté à votre style de vie et à votre budget.
                 </p>
                 <p>
                     <strong>Loyer sur demande:</strong> <br>Contactez nous pour plus d'informations !
                 </p>
             </div>
+           
             <img src="image/interieur2.jpg" alt="Image de l'appartement" class="image">
 
         </div>
@@ -1404,6 +1403,18 @@
                 <div class="icon-title">
                     Borne de
                     recharge
+                </div>
+            </div>
+            <div class="icon-box">
+                <img src="image/interphone1.png" alt="">
+                <div class="icon-title">
+                   Interphone
+                </div>
+            </div>
+            <div class="icon-box">
+                <img src="image/echoresponsable.png" alt="">
+                <div class="icon-title">
+                   Écho-responsable
                 </div>
             </div>
          
@@ -1535,18 +1546,20 @@
                     <div class="contacteznous">
                         <div class="imagecontact">
                             <img src="image/eli.jpg" alt="Titre de l'image" />
-                            <p>Elio <br> Elio@PlaceOconnor.ca </p>
+                            <p>Elio BARCHICHAT<br> Elio@PlaceOconnor.ca </p>
                         </div>
-
+    
                         <div class="imagecontact">
                             <img src="image/nathalie.jpg" alt="Titre de l'image" />
-                            <p class="image-title">Nathalie <br> Natalie@PlaceOconnor.ca </p>
+                            <p class="image-title">Natalie GREENSPOON <br> Natalie@PlaceOconnor.ca </p>
                         </div>
                     </div>
                     <br><br>
-                    <p>Pour plus d informations: <br> Info@PlaceOconnor.ca</p>
-
-
+                    <p>Pour plus d informations: <br> 
+                    <img src="image/mail.png" alt="Email" style="width: 20px; height: 20px;"> : <a href="mailto Info@PlaceOconnor.ca">  Info@PlaceOconnor.ca </a> <br>
+                    <img src="image/telephone.png" alt="Téléphone" style="width: 20px; height: 20px;">   : 514-562-2903   </p>
+    
+    
                 </div>
                 <p class="color">
                     Place O'Connor 2024 | Toutes les images et finis présentés dans ce site web sont à titre indicatif
@@ -1598,7 +1611,7 @@
         // Auto play slides every 5 seconds
         setInterval(() => {
             moveSlide(1);
-        }, 5000);
+        }, 10000);
         //filtre pour le tableau
         function filtrerDisponibilite() {
             const filtre = document.getElementById("filtreDisponibilite").value;
