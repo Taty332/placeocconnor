@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html lang="EN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appt-a-louer</title>
+    <link rel="stylesheet" href="css/Alouer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <!-- Ajout de l'id "navbar" pour cibler l'élément avec JavaScript -->
+
+        <nav id="navbar" class="navbar">
+            <div>
+                <a href="index.html"><img src="image/logoAn.png" alt="Logo"></a>
+            </div>
+
+            <div class="nav-links">
+                <ul>
+                    <li><a href="TheProject.html">The Project</a></li>
+                    <li class="active"><a href="Rent.html">Apartments for rent</a></li>
+                    <li><a href="Neighborhood.html">Neighborhood</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="appt-alouer.html">FR</a></li>
+                </ul>
+            </div>
+            <img src="image/Menu2 (2).png" alt="menu hamburger" class="menu-hamburger">
+        </nav>
+    </header>
+
+    <!-- Carousel -->
+    <div class="carousel">
+        <!-- Slide 1 -->
+        <div class="slide active">
+            <img src="image/maison1.jpg">
+            <div class="text">
+                <h1>Place O'Connor</h1>
+                <br> Discover comfortable apartments at unbeatable prices<br><br> AVAILABLE NOW
+                <br> <br> <a href="#contact">CONTACT US </a><br>
+
+            </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="slide">
+            <img src="image/maison2.jpg" alt="Image 2">
+            <div class="text">
+                <h1>Place O'Connor</h1>
+                <br> Discover comfortable apartments at unbeatable prices<br><br> AVAILABLE NOW
+                <br> <br> <a href="#contact">CONTACTEZ NOUS </a><br>
+
+            </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="slide">
+            <img src="image/maison3.jpg" alt="Image 3">
+            <div class="text">
+                <h1>Place O'Connor</h1>
+                <br> Discover comfortable apartments at unbeatable prices<br><br> AVAILABLE NOW
+                <br> <br> <a href="#contact">CONTACT US </a><br>
+
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+
+    </div>
+    <!--  image immeuble avec tableau -->
+
+
+    <div class="textdecouverteplan">
+        <br><br><br>
+        <h1><strong>APARTMENT PLANS</strong></h1> <br><br>
+
+        <p>SELECT A FLOOR TO VIEW UNIT PLANS</p> <br><br>
+
+        <div class="titre-decoration">
+            <div class="ligne"></div>
+            <div class="icon"></div>
+            <div class="ligne"></div>
+        </div>
+    </div>
+
+
+    <div class="immeuble1">
+
+        <!--  image immeuble  -->
+        <div class="img-build">
+            <img src="image/img build.jpg" alt="">
+            <!-- Différentes zones cliquables -->
+            <a href="#zone1">
+                <div class="zone" style="top: 15%; left:0% ; width:100%; height: 25%;" onclick="afficherZone('zone1')">
+                    <span class="etage-text" style="top: 20%; left: 0;">FLOOR 3</span>
+                </div>
+
+            </a>
+            <a href="#zone2">
+                <div class="zone" style="top: 40%; left: 0%; width: 100%; height: 25%;" onclick="afficherZone('zone2')">
+                    <span class="etage-text" style="top: 20%; left: 0;">FLOOR 2</span>
+                </div>
+            </a>
+            <a href="#zone3">
+                <div class="zone" style="top: 67%; left: 0%; width: 100%; height: 25%;" onclick="afficherZone('zone3')">
+                    <span class="etage-text" style="top: 20%; left: 0;">FLOOR 1</span>
+                </div>
+            </a>
+        </div>
+        <!-- Tableau des données   -->
+        <div class="tab">
+            <h2>List of Apartments</h2>
+
+            <label for="filtreDisponibilite">Filter by availability :</label>
+            <select id="filtreDisponibilite" onchange="filtrerDisponibilite()">
+                <option value="tous">All</option>
+                <option value="Disponible">Available</option>
+                <option value="non-disponible">unavailable</option>
+            </select>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th># </th>
+                        <th><img src="image/Surface.png" alt=""></th>
+                        <th><img src="image/Chambre.png" alt=""></th>
+                        <th><img src="image/Sb.png" alt=""></th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr data-disponibilite="Disponible" class="Disponible">
+                        <td><a href="#plan1" onclick="afficherPlan('plan1')">A-101</a></td>
+                        <td>788</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>Available</td>
+                    </tr>
+
+                    <tr data-disponibilite="Disponible" class="Disponible">
+                        <td><a href="#plan2" onclick="afficherPlan('plan2')">A-102</a></td>
+                        <td>804</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td><Data></Data>Available</td>
+                    </tr>
+
+                    <tr data-disponibilite="Disponible" class="Disponible">
+                        <td><a href="#plan3" onclick="afficherPlan('plan3')">A-103</a></td>
+                        <td>757</td>
+                        <td>1 (+ desk)</td>
+                        <td>1</td>
+                        <td>Available</td>
+                    </tr>
+
+                    <tr data-disponibilite="Disponible" class="Disponible">
+                        <td><a href="#plan4" onclick="afficherPlan('plan4')">A-104</a></td>
+                        <td>707</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>Available</td>
+                    </tr>
+
+                    <tr data-disponibilite="Disponible" class="Disponible">
+                        <td> <a href="#plan5" onclick="afficherPlan('plan5')">62-101</a></td>
+                        <td>1156</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr data-disponibilite="Disponible" class="Disponible">
+                        <td> <a href="#plan6" onclick="afficherPlan('plan6')">A-201</a></td>
+                        <td>614</td>
+                        <td>1 </td>
+                        <td>1</td>
+                        <td>Available</td>
+                    </tr>
+
+                    <tr data-disponibilite="Disponible" class="Disponible">
+                        <td> <a href="#plan7" onclick="afficherPlan('plan7')">A-202</a></td>
+                        <td>727</td>
+                        <td>2 </td>
+                        <td>1</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr data-disponibilite="Disponible" class="Disponible">
+                        <td> <a href="#plan8" onclick="afficherPlan('plan8')">A-203</a></td>
+                        <td>546</td>
+                        <td>1 </td>
+                        <td>1</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr data-disponibilite="Disponible" class="Disponible">
+                        <td> <a href="#plan9" onclick="afficherPlan('plan9')">A-204</a></td>
+                        <td>394</td>
+                        <td>Loaf</td>
+                        <td>1</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr data-disponibilite="Disponible" class="Disponible">
+                        <td><a href="#plan10" onclick="afficherPlan('plan10')">A-205</a> </td>
+                        <td>555</td>
+                        <td>2 </td>
+                        <td>1</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr data-disponibilite="Disponible" class="Disponible">
+                        <td><a href="#plan11" onclick="afficherPlan('plan11')">A-206</a> </td>
+                        <td>427</td>
+                        <td>1 </td>
+                        <td>1</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr data-disponibilite="Disponible" class="Disponible">
+                        <td> <a href="#plan12" onclick="afficherPlan('plan12')">62-201</a></td>
+                        <td>788</td>
+                        <td>2 </td>
+                        <td>1</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr data-disponibilite="Disponible" class="Disponible">
+                        <td> <a href="#plan13" onclick="afficherPlan('plan13')">62-202</a></td>
+                        <td>838</td>
+                        <td>2 </td>
+                        <td>1</td>
+                        <td>Available</td>
+
+                    </tr>
+                    <tr data-disponibilite="Disponible" class="Disponible">
+                        <td><a href="#plan14" onclick="afficherPlan('plan14')">A-301</a></td>
+                        <td>639</td>
+                        <td>1 </td>
+                        <td>1</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr data-disponibilite="Disponible" class="Disponible">
+                        <td><a href="#plan15" onclick="afficherPlan('plan15')">A-302</a> </td>
+                        <td> 816</td>
+                        <td>2 </td>
+                        <td>1</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr data-disponibilite="Disponible" class="Disponible">
+                        <td><a href="#plan16" onclick="afficherPlan('plan16')">A-303</a></td>
+                        <td>625</td>
+                        <td>1 </td>
+                        <td>1</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr data-disponibilite="Disponible" class="Disponible">
+                        <td> <a href="#plan17" onclick="afficherPlan('plan17')">A-304</a></td>
+                        <td>617</td>
+                        <td>2 </td>
+                        <td>1</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr data-disponibilite="Disponible" class="Disponible">
+                        <td> <a href="#plan18" onclick="afficherPlan('plan18')">A-305</a></td>
+                        <td>667</td>
+                        <td>2 </td>
+                        <td>1</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr data-disponibilite="Disponible" class="Disponible">
+                        <td> <a href="#plan19" onclick="afficherPlan('plan19')">62-301</a></td>
+                        <td>720</td>
+                        <td>2 </td>
+                        <td>1</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr data-disponibilite="Disponible" class="Disponible">
+                        <td><a href="#plan20" onclick="afficherPlan('plan20')">62-302</a></td>
+                        <td>748</td>
+                        <td>2 </td>
+                        <td>1</td>
+                        <td>Available</td>
+                    </tr>
+
+                    <tr data-disponibilite="non-disponible" class="non-disponible">
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Unavailable</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> <!-- Fin grand Div-->
+    <!-- Contenu caché pour chaque zone -->
+    <div id="zone3" class="contenu-cache">
+        <div class="contenu-flex">
+            <div class="img-build"><img class="planetage" src="image/Etage1.png" alt="Alternate Text" /></div>
+            <div class="tab">
+                <h2>Ground floor apartments</h2>
+
+                <label for="filtreDisponibilite1">Filter by availability :</label>
+                <select id="filtreDisponibilite1" onchange="filtrerDisponibilite1()">
+                    <option value="tous1">All</option>
+                    <option value="Disponible1">Available</option>
+                    <option value="non-disponible1">Unavailable</option>
+                </select>
+
+                <table id="tabrezchaussee">
+                    <thead>
+                        <tr>
+                            <th># </th>
+                            <th><img src="image/Surface.png" alt=""></th>
+                            <th><img src="image/Chambre.png" alt=""></th>
+                            <th><img src="image/Sb.png" alt=""></th>
+                            <th>Statut</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr data-disponibilite1="Disponible1" class="Disponible1">
+                            <td><a href="#plan1" onclick="afficherPlan('plan1')">A-101</a></td>
+                            <td>788</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>Available</td>
+                        </tr>
+
+                        <tr data-disponibilite1="Disponible1" class="Disponible1">
+                            <td><a href="#plan2" onclick="afficherPlan('plan2')">A-102</a></td>
+                            <td>804</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td><Data></Data>Available</td>
+                        </tr>
+
+                        <tr data-disponibilite1="Disponible1" class="Disponible1">
+                            <td><a href="#plan3" onclick="afficherPlan('plan3')">A-103</a></td>
+                            <td>757</td>
+                            <td>1 (+ desk)</td>
+                            <td>1</td>
+                            <td>Available</td>
+                        </tr>
+
+                        <tr data-disponibilite1="Disponible1" class="Disponible1">
+                            <td><a href="#plan4" onclick="afficherPlan('plan4')">A-104</a></td>
+                            <td>707</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>Available</td>
+                        </tr>
+
+                        <tr data-disponibilite1="Disponible1" class="Disponible1">
+                            <td> <a href="#plan5" onclick="afficherPlan('plan5')">62-101</a></td>
+                            <td>1156</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>Available</td>
+                        </tr>
+
+                        <tr data-disponibilite1="non-disponible1" class="non-disponible1">
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>Unavailable</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="zone2" class="contenu-cache">
+        <div class="contenu-flex">
+            <div class="img-build"><img class="planetage" src="image/Etage2.png" alt="Alternate Text" /></div>
+            <div class="tab">
+                <h2>Apartments Floor 1</h2>
+                <label for="filtreDisponibilite2">Filter by availability :</label>
+                <select id="filtreDisponibilite2" onchange="filtrerDisponibilite2()">
+                    <option value="tous2">All</option>
+                    <option value="Disponible2">Available</option>
+                    <option value="non-disponible2">Unavailable</option>
+                </select>
+
+                <table id="tabetage1">
+                    <thead>
+                        <tr>
+                            <th># </th>
+                            <th><img src="image/Surface.png" alt=""></th>
+                            <th><img src="image/Chambre.png" alt=""></th>
+                            <th><img src="image/Sb.png" alt=""></th>
+                            <th>Statut</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+
+                        <tr data-disponibilite2="Disponible2" class="Disponible2">
+                            <td> <a href="#plan6" onclick="afficherPlan('plan6')">A-201</a></td>
+                            <td>614</td>
+                            <td>1 </td>
+                            <td>1</td>
+                            <td>Available</td>
+                        </tr>
+
+                        <tr data-disponibilite2="Disponible2" class="Disponible2">
+                            <td> <a href="#plan7" onclick="afficherPlan('plan7')">A-202</a></td>
+                            <td>727</td>
+                            <td>2 </td>
+                            <td>1</td>
+                            <td>Available</td>
+                        </tr>
+                        <tr data-disponibilite2="Disponible2" class="Disponible2">
+                            <td> <a href="#plan8" onclick="afficherPlan('plan8')">A-203</a></td>
+                            <td>546</td>
+                            <td>1 </td>
+                            <td>1</td>
+                            <td>Available</td>
+                        </tr>
+                        <tr data-disponibilite2="Disponible2" class="Disponible2">
+                            <td> <a href="#plan9" onclick="afficherPlan('plan9')">A-204</a></td>
+                            <td>394</td>
+                            <td>Loaf</td>
+                            <td>1</td>
+                            <td>Available</td>
+                        </tr>
+                        <tr data-disponibilite2="Disponible2" class="Disponible2">
+                            <td><a href="#plan10" onclick="afficherPlan('plan10')">A-205</a> </td>
+                            <td>555</td>
+                            <td>2 </td>
+                            <td>1</td>
+                            <td>Available</td>
+                        </tr>
+                        <tr data-disponibilite2="Disponible2" class="Disponible2">
+                            <td><a href="#plan11" onclick="afficherPlan('plan11')">A-206</a> </td>
+                            <td>427</td>
+                            <td>1 </td>
+                            <td>1</td>
+                            <td>Available</td>
+                        </tr>
+                        <tr data-disponibilite2="Disponible2" class="Disponible2">
+                            <td> <a href="#plan12" onclick="afficherPlan('plan12')">62-201</a></td>
+                            <td>788</td>
+                            <td>2 </td>
+                            <td>1</td>
+                            <td>Available</td>
+                        </tr>
+                        <tr data-disponibilite2="Disponible2" class="Disponible2">
+                            <td> <a href="#plan13" onclick="afficherPlan('plan13')">62-202</a></td>
+                            <td>838</td>
+                            <td>2 </td>
+                            <td>1</td>
+                            <td>Available</td>
+
+
+                        <tr data-disponibilite2="non-disponible2" class="non-disponible2">
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>Unavailable</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="zone1" class="contenu-cache">
+        <div class="contenu-flex">
+            <div class="img-build"><img class="planetage" src="image/Etage3.png" alt="Alternate Text" /></div>
+            <div class="tab">
+                <h2>Apartments Floor 2</h2>
+                <label for="filtreDisponibilite3">Filter by availability :</label>
+                <select id="filtreDisponibilite3" onchange="filtrerDisponibilite3()">
+                    <option value="tous3">All</option>
+                    <option value="Disponible3">Available</option>
+                    <option value="non-disponible3">Unavailable</option>
+                </select>
+
+                <table id="tabetage2">
+                    <thead>
+                        <tr>
+                            <th># </th>
+                            <th><img src="image/Surface.png" alt=""></th>
+                            <th><img src="image/Chambre.png" alt=""></th>
+                            <th><img src="image/Sb.png" alt=""></th>
+                            <th>Statut</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr data-disponibilite3="Disponible3" class="Disponible3">
+                            <td><a href="#plan14" onclick="afficherPlan('plan14')">A-301</a></td>
+                            <td>639</td>
+                            <td>1 </td>
+                            <td>1</td>
+                            <td>Available</td>
+                        </tr>
+                        <tr data-disponibilite3="Disponible3" class="Disponible3">
+                            <td><a href="#plan15" onclick="afficherPlan('plan15')">A-302</a> </td>
+                            <td> 816</td>
+                            <td>2 </td>
+                            <td>1</td>
+                            <td>Available</td>
+                        </tr>
+                        <tr data-disponibilite3="Disponible3" class="Disponible3">
+                            <td><a href="#plan16" onclick="afficherPlan('plan16')">A-303</a></td>
+                            <td>625</td>
+                            <td>1 </td>
+                            <td>1</td>
+                            <td>Available</td>
+                        </tr>
+                        <tr data-disponibilite3="Disponible3" class="Disponible3">
+                            <td> <a href="#plan17" onclick="afficherPlan('plan17')">A-304</a></td>
+                            <td>617</td>
+                            <td>2 </td>
+                            <td>1</td>
+                            <td>Available</td>
+                        </tr>
+                        <tr data-disponibilite3="Disponible3" class="Disponible3">
+                            <td> <a href="#plan18" onclick="afficherPlan('plan18')">A-305</a></td>
+                            <td>667</td>
+                            <td>2 </td>
+                            <td>1</td>
+                            <td>Available</td>
+                        </tr>
+                        <tr data-disponibilite3="Disponible3" class="Disponible3">
+                            <td> <a href="#plan19" onclick="afficherPlan('plan19')">62-301</a></td>
+                            <td>720</td>
+                            <td>2 </td>
+                            <td>1</td>
+                            <td>Available</td>
+                        </tr>
+                        <tr data-disponibilite3="Disponible3" class="Disponible3">
+                            <td><a href="#plan20" onclick="afficherPlan('plan20')">62-302</a></td>
+                            <td>748</td>
+                            <td>2 </td>
+                            <td>1</td>
+                            <td>Available</td>
+                        </tr>
+
+                        <tr data-disponibilite3="non-disponible3" class="non-disponible3">
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>Unavailable</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- debut plan par appartement dans 1 grand div puis un petit div // image n,est pas dans un div  -->
+
+    <div id="plan1" class="plan">
+        <div class="plan0">
+            <div class="image-container">
+                <img src="Plans/A-101.png" alt="">
+            </div>
+            <div class="table-container">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td> Unit</td>
+                            <td class="forme-td">A-101</td>
+                        </tr>
+                        <tr>
+                            <td>Area</td>
+                            <td class="forme-td">788 pi²</td>
+                        </tr>
+                        <tr>
+                            <td>Room(s)</td>
+                            <td class="forme-td">2</td>
+                        </tr>
+                        <tr>
+                            <td>Bathroom(s)</td>
+                            <td class="forme-td">1</td>
+                        </tr>
+                        <tr>
+                            <td>Statut</td>
+                            <td class="forme-td">Available</td>
+                        </tr>
+                        <tr>
+                            <td>Floor</td>
+                            <td class=" forme-td">Rez-De-Chaussée</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici pour tester le défilement -->
+                    </tbody>
+                </table>
+                <a href="fichier/PDF/A101.pdf" download="A101.pdf" class="bouton_pdf">Download PDF</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="plan2" class="plan">
+        <!-- 1 gra -->
+        <div class="plan0">
+            <div class="image-container">
+                <img src="Plans/A-102.png" alt="">
+            </div>
+            <div class="table-container">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td> Unit</td>
+                            <td class="forme-td">A-102</td>
+                        </tr>
+                        <tr>
+                            <td>Area</td>
+                            <td class="forme-td">804 pi²</td>
+                        </tr>
+                        <tr>
+                            <td>Room(s)</td>
+                            <td class="forme-td">2</td>
+                        </tr>
+                        <tr>
+                            <td>Bathroom(s)</td>
+                            <td class="forme-td">1</td>
+                        </tr>
+                        <tr>
+                            <td>Statut</td>
+                            <td class="forme-td">Available</td>
+                        </tr>
+                        <tr>
+                            <td>Floor</td>
+                            <td class=" forme-td">Ground Floor</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici pour tester le défilement -->
+                    </tbody>
+                </table>
+                <a href="fichier/PDF/A102.pdf" download="A102.pdf" class="bouton_pdf">Download PDF</a>
+            </div>
+        </div>
+    </div>
+    <div id="plan3" class="plan">
+        <!-- 1 gra -->
+        <div class="plan0">
+            <div class="image-container">
+                <img src="Plans/A-103.png" alt="">
+            </div>
+            <div class="table-container">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td> Unit</td>
+                            <td class="forme-td">A-103</td>
+                        </tr>
+                        <tr>
+                            <td>Area</td>
+                            <td class="forme-td"> 757 pi²</td>
+                        </tr>
+                        <tr>
+                            <td>Room(s)</td>
+                            <td class="forme-td">1+(Bueau)</td>
+                        </tr>
+                        <tr>
+                            <td>Bathroom(s)</td>
+                            <td class="forme-td">1</td>
+                        </tr>
+                        <tr>
+                            <td>Statut</td>
+                            <td class="forme-td">Available</td>
+                        </tr>
+                        <tr>
+                            <td>Floor</td>
+                            <td class=" forme-td">Rez-De-Chaussée</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici pour tester le défilement -->
+                    </tbody>
+                </table>
+                <a href="fichier/PDF/A103.pdf" download="A103.pdf" class="bouton_pdf">Download PDF</a>
+            </div>
+        </div>
+    </div>
+    <div id="plan4" class="plan">
+        <!-- 1 gra -->
+        <div class="plan0">
+            <div class="image-container"><img src="Plans/A-104.png" alt=""></div>
+            <div class="table-container">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td> Unit</td>
+                            <td class="forme-td">A-104</td>
+                        </tr>
+                        <tr>
+                            <td>Area</td>
+                            <td class="forme-td">707 pi²</td>
+                        </tr>
+                        <tr>
+                            <td>Room(s)</td>
+                            <td class="forme-td">2</td>
+                        </tr>
+                        <tr>
+                            <td>Bathroom(s)</td>
+                            <td class="forme-td">1</td>
+                        </tr>
+                        <tr>
+                            <td>Statut</td>
+                            <td class="forme-td">Available</td>
+                        </tr>
+                        <tr>
+                            <td>Floor</td>
+                            <td class=" forme-td">Rez-De-Chaussée</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici pour tester le défilement -->
+                    </tbody>
+                </table>
+                <a href="fichier/PDF/A104.pdf" download="A104.pdf" class="bouton_pdf">Download PDF</a>
+            </div>
+        </div>
+    </div>
+    <div id="plan5" class="plan">
+        <!-- 1 gra -->
+        <div class="plan0">
+            <div class="image-container"><img src="Plans/62-101.png" alt=""></div>
+            <div class="table-container">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td> Unit</td>
+                            <td class="forme-td">62-101</td>
+                        </tr>
+                        <tr>
+                            <td>Area</td>
+                            <td class="forme-td">1156 pi²</td>
+                        </tr>
+                        <tr>
+                            <td>Room(s)</td>
+                            <td class="forme-td">2</td>
+                        </tr>
+                        <tr>
+                            <td>Bathroom(s)</td>
+                            <td class="forme-td">1</td>
+                        </tr>
+                        <tr>
+                            <td>Statut</td>
+                            <td class="forme-td">Available</td>
+                        </tr>
+                        <tr>
+                            <td>Floor</td>
+                            <td class=" forme-td">Rez-De-Chaussée</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici pour tester le défilement -->
+                    </tbody>
+                </table>
+                <a href="fichier/PDF/62101.pdf" download="62101.pdf" class="bouton_pdf">Download PDF</a>
+            </div>
+        </div>
+    </div>
+    <div id="plan6" class="plan">
+        <!-- 1 gra -->
+        <div class="plan0">
+            <div class="image-container"><img src="Plans/A-201.png" alt=""></div>
+            <div class="table-container">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td> Unit</td>
+                            <td class="forme-td">A-201</td>
+                        </tr>
+                        <tr>
+                            <td>Area</td>
+                            <td class="forme-td">614 pi²</td>
+                        </tr>
+                        <tr>
+                            <td>Room(s)</td>
+                            <td class="forme-td">1</td>
+                        </tr>
+                        <tr>
+                            <td>Bathroom(s)</td>
+                            <td class="forme-td">1</td>
+                        </tr>
+                        <tr>
+                            <td>Statut</td>
+                            <td class="forme-td">Available</td>
+                        </tr>
+                        <tr>
+                            <td>Floor</td>
+                            <td class=" forme-td">1</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici pour tester le défilement -->
+                    </tbody>
+                </table>
+                <a href="fichier/PDF/A201.pdf" download="A201.pdf" class="bouton_pdf">Download PDF</a>
+            </div>
+        </div>
+    </div>
+    <div id="plan7" class="plan">
+        <!-- 1 gra -->
+        <div class="plan0">
+            <div class="image-container"><img src="Plans/A-202.png" alt=""></div>
+            <div class="table-container">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td> Unit</td>
+                            <td class="forme-td">A-202</td>
+                        </tr>
+                        <tr>
+                            <td>Area</td>
+                            <td class="forme-td">727 pi²</td>
+                        </tr>
+                        <tr>
+                            <td>Room(s)</td>
+                            <td class="forme-td">2</td>
+                        </tr>
+                        <tr>
+                            <td>Bathroom(s)</td>
+                            <td class="forme-td">1</td>
+                        </tr>
+                        <tr>
+                            <td>Statut</td>
+                            <td class="forme-td">Available</td>
+                        </tr>
+                        <tr>
+                            <td>Floor</td>
+                            <td class=" forme-td">1</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici pour tester le défilement -->
+                    </tbody>
+                </table>
+                <a href="fichier/PDF/A202.pdf" download="A202.pdf" class="bouton_pdf">Download PDF</a>
+            </div>
+        </div>
+    </div>
+    <div id="plan8" class="plan">
+        <!-- 1 gra -->
+        <div class="plan0">
+            <div class="image-container"><img src="Plans/A-203.png" alt=""></div>
+            <div class="table-container">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td> Unit</td>
+                            <td class="forme-td">A-203</td>
+                        </tr>
+                        <tr>
+                            <td>Area</td>
+                            <td class="forme-td">546 pi²</td>
+                        </tr>
+                        <tr>
+                            <td>Room(s)</td>
+                            <td class="forme-td">1</td>
+                        </tr>
+                        <tr>
+                            <td>Bathroom(s)</td>
+                            <td class="forme-td">1</td>
+                        </tr>
+                        <tr>
+                            <td>Statut</td>
+                            <td class="forme-td">Available</td>
+                        </tr>
+                        <tr>
+                            <td>Floor</td>
+                            <td class=" forme-td">1</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici pour tester le défilement -->
+                    </tbody>
+                </table>
+                <a href="fichier/PDF/A203.pdf" download="A203.pdf" class="bouton_pdf">Download PDF</a>
+            </div>
+        </div>
+    </div>
+    <div id="plan9" class="plan">
+        <!-- 1 gra -->
+        <div class="plan0">
+            <div class="image-container"><img src="Plans/A-204.png" alt=""></div>
+            <div class="table-container">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td> Unit</td>
+                            <td class="forme-td">A-204</td>
+                        </tr>
+                        <tr>
+                            <td>Area</td>
+                            <td class="forme-td">394 pi²</td>
+                        </tr>
+                        <tr>
+                            <td>Room(s)</td>
+                            <td class="forme-td">Loaf</td>
+                        </tr>
+                        <tr>
+                            <td>Bathroom(s)</td>
+                            <td class="forme-td">1</td>
+                        </tr>
+                        <tr>
+                            <td>Statut</td>
+                            <td class="forme-td">Available</td>
+                        </tr>
+                        <tr>
+                            <td>Floor</td>
+                            <td class=" forme-td">1</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici pour tester le défilement -->
+                    </tbody>
+                </table>
+                <a href="fichier/PDF/A204.pdf" download="A204.pdf" class="bouton_pdf">Download PDF</a>
+            </div>
+        </div>
+    </div>
+    <div id="plan10" class="plan">
+        <!-- 1 gra -->
+        <div class="plan0">
+            <div class="image-container"><img src="Plans/A-205.png" alt=""></div>
+            <div class="table-container">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td> Unit</td>
+                            <td class="forme-td">A-205</td>
+                        </tr>
+                        <tr>
+                            <td>Area</td>
+                            <td class="forme-td">555 pi²</td>
+                        </tr>
+                        <tr>
+                            <td>Room(s)</td>
+                            <td class="forme-td">2</td>
+                        </tr>
+                        <tr>
+                            <td>Bathroom(s)</td>
+                            <td class="forme-td">1</td>
+                        </tr>
+                        <tr>
+                            <td>Statut</td>
+                            <td class="forme-td">Available</td>
+                        </tr>
+                        <tr>
+                            <td>Floor</td>
+                            <td class=" forme-td">1</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici pour tester le défilement -->
+                    </tbody>
+                </table>
+                <a href="fichier/PDF/A205.pdf" download="A205.pdf" class="bouton_pdf">Download PDF</a>
+            </div>
+        </div>
+    </div>
+    <div id="plan11" class="plan">
+        <!-- 1 gra -->
+        <div class="plan0">
+            <div class="image-container"><img src="Plans/A-206.png" alt=""></div>
+            <div class="table-container">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td> Unit</td>
+                            <td class="forme-td">A-206</td>
+                        </tr>
+                        <tr>
+                            <td>Area</td>
+                            <td class="forme-td">427 pi²</td>
+                        </tr>
+                        <tr>
+                            <td>Room(s)</td>
+                            <td class="forme-td">1</td>
+                        </tr>
+                        <tr>
+                            <td>Bathroom(s)</td>
+                            <td class="forme-td">1</td>
+                        </tr>
+                        <tr>
+                            <td>Statut</td>
+                            <td class="forme-td">Available</td>
+                        </tr>
+                        <tr>
+                            <td>Floor</td>
+                            <td class=" forme-td">1</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici pour tester le défilement -->
+                    </tbody>
+                </table>
+                <a href="fichier/PDF/A206.pdf" download="A206.pdf" class="bouton_pdf">Download PDF</a>
+            </div>
+        </div>
+    </div>
+    <div id="plan12" class="plan">
+        <!-- 1 gra -->
+        <div class="plan0">
+            <div class="image-container"><img src="Plans/62-201.png" alt=""></div>
+            <div class="table-container">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td> Unit</td>
+                            <td class="forme-td">62-201</td>
+                        </tr>
+                        <tr>
+                            <td>Area</td>
+                            <td class="forme-td">788 pi²</td>
+                        </tr>
+                        <tr>
+                            <td>Room(s)</td>
+                            <td class="forme-td">2</td>
+                        </tr>
+                        <tr>
+                            <td>Bathroom(s)</td>
+                            <td class="forme-td">1</td>
+                        </tr>
+                        <tr>
+                            <td>Statut</td>
+                            <td class="forme-td">Available</td>
+                        </tr>
+                        <tr>
+                            <td>Floor</td>
+                            <td class=" forme-td">1</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici pour tester le défilement -->
+                    </tbody>
+                </table>
+                <a href="fichier/PDF/62201.pdf" download="62201.pdf" class="bouton_pdf">Download PDF</a>
+            </div>
+        </div>
+    </div>
+    <div id="plan13" class="plan">
+        <!-- 1 gra -->
+        <div class="plan0">
+            <div class="image-container"><img src="Plans/62-202.png" alt=""></div>
+            <div class="table-container">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td> Unit</td>
+                            <td class="forme-td">62-202</td>
+                        </tr>
+                        <tr>
+                            <td>Area</td>
+                            <td class="forme-td">838 pi²</td>
+                        </tr>
+                        <tr>
+                            <td>Room(s)</td>
+                            <td class="forme-td">2</td>
+                        </tr>
+                        <tr>
+                            <td>Bathroom(s)</td>
+                            <td class="forme-td">1</td>
+                        </tr>
+                        <tr>
+                            <td>Statut</td>
+                            <td class="forme-td">Available</td>
+                        </tr>
+                        <tr>
+                            <td>Floor</td>
+                            <td class=" forme-td">1</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici pour tester le défilement -->
+                    </tbody>
+                </table>
+                <a href="fichier/PDF/62202.pdf" download="62202.pdf" class="bouton_pdf">Download PDF</a>
+            </div>
+        </div>
+    </div>
+    <div id="plan14" class="plan">
+        <!-- 1 gra -->
+        <div class="plan0">
+            <div class="image-container"><img src="Plans/A-301.png" alt=""></div>
+            <div class="table-container">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td> Unit</td>
+                            <td class="forme-td">A-301</td>
+                        </tr>
+                        <tr>
+                            <td>Area</td>
+                            <td class="forme-td">639 pi²</td>
+                        </tr>
+                        <tr>
+                            <td>Room(s)</td>
+                            <td class="forme-td">1</td>
+                        </tr>
+                        <tr>
+                            <td>Bathroom(s)</td>
+                            <td class="forme-td">1</td>
+                        </tr>
+                        <tr>
+                            <td>Statut</td>
+                            <td class="forme-td">Available</td>
+                        </tr>
+                        <tr>
+                            <td>Floor</td>
+                            <td class=" forme-td">2</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici pour tester le défilement -->
+                    </tbody>
+                </table>
+                <a href="fichier/PDF/A301.pdf" download="A301.pdf" class="bouton_pdf">Download PDF</a>
+            </div>
+        </div>
+    </div>
+    <div id="plan15" class="plan">
+        <!-- 1 gra -->
+        <div class="plan0">
+            <div class="image-container"><img src="Plans/A-302.png" alt=""></div>
+            <div class="table-container">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td> Unit</td>
+                            <td class="forme-td">A-302</td>
+                        </tr>
+                        <tr>
+                            <td>Area</td>
+                            <td class="forme-td">816 pi²</td>
+                        </tr>
+                        <tr>
+                            <td>Room(s)</td>
+                            <td class="forme-td">2</td>
+                        </tr>
+                        <tr>
+                            <td>Bathroom(s)</td>
+                            <td class="forme-td">1</td>
+                        </tr>
+                        <tr>
+                            <td>Statut</td>
+                            <td class="forme-td">Available</td>
+                        </tr>
+                        <tr>
+                            <td>Floor</td>
+                            <td class=" forme-td">2</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici pour tester le défilement -->
+                    </tbody>
+                </table>
+                <a href="fichier/PDF/A302.pdf" download="A302.pdf" class="bouton_pdf">Download PDF</a>
+            </div>
+        </div>
+    </div>
+    <div id="plan16" class="plan">
+        <!-- 1 gra -->
+        <div class="plan0">
+            <div class="image-container"><img src="Plans/A-303.png" alt=""></div>
+            <div class="table-container">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td> Unit</td>
+                            <td class="forme-td">A-303</td>
+                        </tr>
+                        <tr>
+                            <td>Area</td>
+                            <td class="forme-td">625 pi²</td>
+                        </tr>
+                        <tr>
+                            <td>Room(s)</td>
+                            <td class="forme-td">1</td>
+                        </tr>
+                        <tr>
+                            <td>Bathroom(s)</td>
+                            <td class="forme-td">1</td>
+                        </tr>
+                        <tr>
+                            <td>Statut</td>
+                            <td class="forme-td">Available</td>
+                        </tr>
+                        <tr>
+                            <td>Floor</td>
+                            <td class=" forme-td">2</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici pour tester le défilement -->
+                    </tbody>
+                </table>
+                <a href="fichier/PDF/A303.pdf" download="A303.pdf" class="bouton_pdf">Download PDF</a>
+            </div>
+        </div>
+    </div>
+    <div id="plan17" class="plan">
+        <!-- 1 gra -->
+        <div class="plan0">
+            <div class="image-container"><img src="Plans/A-304.png" alt=""></div>
+            <div class="table-container">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td> Unit</td>
+                            <td class="forme-td">A-304</td>
+                        </tr>
+                        <tr>
+                            <td>Area</td>
+                            <td class="forme-td">617 pi²</td>
+                        </tr>
+                        <tr>
+                            <td>Room(s)</td>
+                            <td class="forme-td">2</td>
+                        </tr>
+                        <tr>
+                            <td>Bathroom(s)</td>
+                            <td class="forme-td">1</td>
+                        </tr>
+                        <tr>
+                            <td>Statut</td>
+                            <td class="forme-td">Available</td>
+                        </tr>
+                        <tr>
+                            <td>Floor</td>
+                            <td class=" forme-td">2</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici pour tester le défilement -->
+                    </tbody>
+                </table>
+                <a href="fichier/PDF/A304.pdf" download="A304.pdf" class="bouton_pdf">Download PDF</a>
+            </div>
+        </div>
+    </div>
+    <div id="plan18" class="plan">
+        <!-- 1 gra -->
+        <div class="plan0">
+            <div class="image-container"><img src="Plans/A-305.png" alt=""></div>
+            <div class="table-container">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td> Unit</td>
+                            <td class="forme-td">A-305</td>
+                        </tr>
+                        <tr>
+                            <td>Area</td>
+                            <td class="forme-td">667 pi²</td>
+                        </tr>
+                        <tr>
+                            <td>Room(s)</td>
+                            <td class="forme-td">2</td>
+                        </tr>
+                        <tr>
+                            <td>Bathroom(s)</td>
+                            <td class="forme-td">1</td>
+                        </tr>
+                        <tr>
+                            <td>Statut</td>
+                            <td class="forme-td">Available</td>
+                        </tr>
+                        <tr>
+                            <td>Floor</td>
+                            <td class=" forme-td">2</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici pour tester le défilement -->
+                    </tbody>
+                </table>
+                <a href="fichier/PDF/A305.pdf" download="A305.pdf" class="bouton_pdf">Download PDF</a>
+            </div>
+        </div>
+    </div>
+    <div id="plan19" class="plan">
+        <!-- 1 gra -->
+        <div class="plan0">
+            <div class="image-container"><img src="Plans/62-301.png" alt=""></div>
+            <div class="table-container">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td> Unit</td>
+                            <td class="forme-td">62-301</td>
+                        </tr>
+                        <tr>
+                            <td>Area</td>
+                            <td class="forme-td">720 pi²</td>
+                        </tr>
+                        <tr>
+                            <td>Room(s)</td>
+                            <td class="forme-td">2</td>
+                        </tr>
+                        <tr>
+                            <td>Bathroom(s)</td>
+                            <td class="forme-td">1</td>
+                        </tr>
+                        <tr>
+                            <td>Statut</td>
+                            <td class="forme-td">Available</td>
+                        </tr>
+                        <tr>
+                            <td>Floor</td>
+                            <td class=" forme-td">2</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici pour tester le défilement -->
+                    </tbody>
+                </table>
+                <a href="fichier/PDF/62301.pdf" download="62301.pdf" class="bouton_pdf">Download PDF</a>
+            </div>
+        </div>
+    </div>
+    <div id="plan20" class="plan">
+        <!-- 1 gra -->
+        <div class="plan0">
+            <div class="image-container"><img src="Plans/62-302.png" alt=""></div>
+            <div class="table-container">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td> Unit</td>
+                            <td class="forme-td">62-302</td>
+                        </tr>
+                        <tr>
+                            <td>Area</td>
+                            <td class="forme-td">748 pi²</td>
+                        </tr>
+                        <tr>
+                            <td>Room(s)</td>
+                            <td class="forme-td">2</td>
+                        </tr>
+                        <tr>
+                            <td>Bathroom(s)</td>
+                            <td class="forme-td">1</td>
+                        </tr>
+                        <tr>
+                            <td>Statut</td>
+                            <td class="forme-td">Available</td>
+                        </tr>
+                        <tr>
+                            <td>Floor</td>
+                            <td class=" forme-td">2</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici pour tester le défilement -->
+                    </tbody>
+                </table>
+                <a href="fichier/PDF/62302.pdf" download="62302.pdf" class="bouton_pdf">Download PDF</a>
+            </div>
+        </div>
+    </div>
+    <!--  tableau infos appt-->
+
+    <div class="section">
+        <br><br>
+        <h2 class="titre">O’Connor APARTMENTS</h2>
+        <div class="titre-decoration">
+            <br><br><br><br>
+            <div class="ligne"></div>
+            <div class="icon"></div>
+            <div class="ligne"></div>
+        </div>
+        <p class="montexte2">
+            Discover our exclusive rental units, including one- and two-bedroom apartments, studios, and office spaces.
+            Located at the entrance of Huntingdon, Place O’Connor offers numerous in-building services and proximity to
+            shops, parks, and community services. This iconic, fully restored building offers 20 modern apartments
+            combining contemporary comfort with historical charm. Each unit is designed to be ergonomic and
+            eco-friendly, equipped with Wi-Fi-enabled heating and air conditioning, as well as modern windows for
+            optimal energy efficiency. Look no further—your ideal apartment awaits at Place O'Connor.
+        </p>
+    </div>
+
+    <div class="conteneur">
+        <div class="montexte">
+            <h3>
+                <strong>Reserve an Apartment</strong>
+            </h3>
+            <p>
+                Place O'Connor offers a variety of configurations to meet your needs: Loaf, 3 ½ or 4 ½. You will find
+                a home that fits your lifestyle and your budget.
+            </p>
+            <p>
+                <strong>Rent on request:</strong> <br>Contact us for more information!
+            </p>
+        </div>
+
+        <img src="image/interieur2.jpg" alt="Image de l'appartement" class="image">
+
+    </div>
+    <br><br>
+    <div class="icon-container">
+        <div class="icon-box">
+            <img src="image/sonorisation.png" alt="">
+            <div class="icon-title">
+                Superior soundproofing
+            </div>
+        </div>
+        <div class="icon-box">
+            <img src="image/machine.png" alt="">
+            <div class="icon-title">
+                inclusion of 5 household appliances
+            </div>
+        </div>
+        <div class="icon-box">
+            <img src="image/camera.png" alt="">
+            <div class="icon-title">
+                Surveillance camera
+            </div>
+        </div>
+        <div class="icon-box">
+            <img src="image/clim.png" alt="">
+            <div class="icon-title">
+                Air conditioning Wifi
+            </div>
+        </div>
+        <div class="icon-box">
+            <img src="image/parking.png" alt="">
+            <div class="icon-title">
+                Indoor parking
+            </div>
+        </div>
+
+        <div class="icon-box">
+            <img src="image/park externe.png" alt="">
+            <div class="icon-title">
+                Outdoor parking
+            </div>
+        </div>
+        <div class="icon-box">
+            <img src="image/voiturelectrique.png" alt="">
+            <div class="icon-title">
+                Charging station
+            </div>
+        </div>
+        <div class="icon-box">
+            <img src="image/interphone1.png" alt="">
+            <div class="icon-title">
+                Intercom
+            </div>
+        </div>
+        <div class="icon-box">
+            <img src="image/echoresponsable.png" alt="">
+            <div class="icon-title">
+                Eco-responsible
+            </div>
+        </div>
+
+    </div>
+    <!-- images gallerie -->
+
+    <br><br><br><br>
+    <h3 class="titregallerie">IMAGE GALLERY</h3> <br>
+
+    <div class="titre-decoration">
+        <div class="ligne"></div>
+        <div class="icon"></div>
+        <div class="ligne"></div>
+
+    </div>
+    <br><br> <br><br>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="image/cuisine.jpg" alt="Image 1" onclick="openModal(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="image/chambreacoucher.jpg" alt="Image 2" onclick="openModal(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="image/piece de vie.jpg" alt="Image 3" onclick="openModal(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="image/salle-de-bain-1.jpg" alt="Image 4" onclick="openModal(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="image/borne.avif" alt="Image 5" onclick="openModal(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="image/park.jpg" alt="Image 6" onclick="openModal(this)">
+        </div>
+        <!-- Fenêtre modale pour afficher l'image en grand -->
+        <div id="modal" class="modal" onclick="closeModal()">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+    </div>
+    <br>
+
+
+    <div>
+        <br><br> <br><br>
+        <div class="titrecarcte">
+            <h3> <strong>Building Features</strong></h3>
+        </div> <br><br>
+
+        <div class="carateristiques">
+            <div class="car1">
+                <ul>
+                    <li>- <b>Recently restored building : </b>combining historical charm and modernity.</li>
+                    <li>- <b>Enhanced security : </b>controlled access, intercom system and camera surveillance.
+                    </li>
+                    <li>- <b>Parking : </b>14-seater exterior, 13-seater underground interior</li>
+                    <li>- <b>Included : </b>5 modern appliances (stove, refrigerator, dishwasher, washer, dryer)</li>
+                </ul>
+            </div>
+            <div class="car2">
+                <ul>
+                    <li>- <b>Electric car charging station: </b>for eco-responsible residents</li>
+                    <li>- <b>Superior soundproofing: </b>ensuring peace and comfort</li>
+                    <li>- <b>Heating and air conditioning Wi-Fi : </b>remote control for optimal comfort</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <br><br>
+
+
+
+
+    <footer class="footer" id="contact">
+        <div class="container2">
+            <!-- Formulaire à gauche -->
+            <div class="formulaire">
+
+                <form action="#" class="form">
+                    <div class="gender-box">
+                        <h3>Desired size</h3><br>
+                        <div class="gender-option">
+                            <div class="gender">
+                                <input type="radio" id="check-male" name="gender" checked />
+                                <label for="check-male">Loaf</label>
+                            </div>
+                            <div class="gender">
+                                <input type="radio" id="check-female" name="gender" />
+                                <label for="check-female">3 1/2</label>
+                            </div>
+                            <div class="gender">
+                                <input type="radio" id="check-female" name="gender" />
+                                <label for="check-female">4 1/2</label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <label for="">Full name</label>
+                        <input type="text" placeholder="Enter full name" required />
+                    </div>
+
+                    <div class="input-box">
+                        <label for="">E-Mail</label>
+                        <input type="text" placeholder="Enter e-mail address" required />
+                    </div>
+
+                    <div class="input-box">
+                        <div class="input-box">
+                            <label for="">Phone</label>
+                            <input type="number" placeholder="Enter phone number" required>
+                        </div>
+                    </div>
+
+
+                    <div class="input-box adress">
+
+                        <label for="">Message</label>
+                        <textarea id="labelmessage" placeholder="Enter a message" required></textarea>
+                    </div>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <!-- Informations à droite -->
+            <div class="infos">
+                <h3>Contact our team : </h3><br />>
+                <div class="contacteznous">
+                    <div class="imagecontact">
+                        <img src="image/eli.jpg" alt="Titre de l'image" />
+                        <p>Elio BARCHICHAT<br> Elio@PlaceOconnor.ca </p>
+                    </div>
+
+                    <div class="imagecontact">
+                        <img src="image/nathalie.jpg" alt="Titre de l'image" />
+                        <p class="image-title">Natalie GREENSPOON <br> Natalie@PlaceOconnor.ca </p>
+                    </div>
+                </div>
+                <br><br>
+                <p>For more information <br>
+                    <img src="image/mail.png" alt="Email" style="width: 20px; height: 20px;"> : <a
+                        href="mailto Info@PlaceOconnor.ca"> Info@PlaceOconnor.ca </a> <br>
+                    <img src="image/telephone.png" alt="Téléphone" style="width: 20px; height: 20px;"> : 514-562-2903
+                </p>
+
+
+            </div>
+            <p class="color">
+                Place O'Connor 2024 | All images and finishes shown on this website are for illustrative purposes only and subject to change without notice.
+            </p>
+        </div>
+    </footer>
+
+
+</body>
+<!-- script tableau  -->
+<!-- script tableau  -->
+<!-- script tableau  -->
+<script>
+    const navbar = document.getElementById("navbar");
+    const sticky = navbar.offsetTop;
+
+    // Fonction pour ajouter ou retirer la classe "sticky" lors du scroll
+    window.onscroll = function () {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky");
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    };
+
+    // Activation du menu hamburger pour les écrans mobiles
+    const menuHamburger = document.querySelector(".menu-hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuHamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('mobile-menu');
+    });
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === index) slide.classList.add('active');
+        });
+    }
+
+    function moveSlide(direction) {
+        slideIndex = (slideIndex + direction + slides.length) % slides.length;
+        showSlide(slideIndex);
+    }
+
+    // Auto play slides every 5 seconds
+    setInterval(() => {
+        moveSlide(1);
+    }, 4000);
+    //filtre pour le tableau
+    function filtrerDisponibilite() {
+        const filtre = document.getElementById("filtreDisponibilite").value;
+        const lignes = document.querySelectorAll("#tabprincipal tbody tr");
+
+        lignes.forEach(ligne => {
+            const disponibilite = ligne.getAttribute("data-disponibilite");
+            ligne.style.display = (filtre === "tous" || filtre === disponibilite) ? "" : "none";
+        });
+    }
+    function filtrerDisponibilite1() {
+        const filtre1 = document.getElementById("filtreDisponibilite1").value;
+        const lignes1 = document.querySelectorAll("#tabrezchaussee tbody tr");
+
+        lignes1.forEach(ligne1 => {
+            const disponibilite1 = ligne1.getAttribute("data-disponibilite1");
+            ligne1.style.display = (filtre1 === "tous1" || filtre1 === disponibilite1) ? "" : "none";
+        });
+    }
+    function filtrerDisponibilite2() {
+        const filtre2 = document.getElementById("filtreDisponibilite2").value;
+        const lignes2 = document.querySelectorAll("#tabetage1 tbody tr");
+
+        lignes2.forEach(ligne2 => {
+            const disponibilite2 = ligne2.getAttribute("data-disponibilite2");
+            ligne2.style.display = (filtre2 === "tous2" || filtre2 === disponibilite2) ? "" : "none";
+        });
+    }
+    function filtrerDisponibilite3() {
+        const filtre3 = document.getElementById("filtreDisponibilite3").value;
+        const lignes3 = document.querySelectorAll("#tabetage2 tbody tr");
+
+        lignes3.forEach(ligne3 => {
+            const disponibilite3 = ligne3.getAttribute("data-disponibilite3");
+            ligne3.style.display = (filtre3 === "tous3" || filtre3 === disponibilite3) ? "" : "none";
+        });
+    }
+
+    //filtre pour l ombre par immeuble
+    function afficherZone(zoneId) {
+        document.querySelectorAll('.contenu-cache').forEach(zone => {
+            zone.classList.remove('visible');
+        });
+        document.getElementById(zoneId).classList.add('visible');
+    }
+    if (zone) {
+        // Scroller vers la zone affichée
+        zone.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    //script plans
+    function afficherPlan(planId) {
+        // Cache tous les plans
+        const plans = document.querySelectorAll('.plan');
+        plans.forEach(plan => {
+            plan.style.display = 'none';
+        });
+
+        // Affiche le plan sélectionné
+        document.getElementById(planId).style.display = 'block';
+    }
+</script>
+<script>
+    function openModal(image) {
+        document.getElementById("modal").style.display = "block";
+        document.getElementById("modalImage").src = image.src;
+    }
+
+    function closeModal() {
+        document.getElementById("modal").style.display = "none";
+    }
+
+</script>
+
+</html>

@@ -169,12 +169,17 @@ header {
         text-align: center;
         margin-bottom: 20px;
     }
-    .justifytext {
+    .justifytext p {
         text-align: justify; /*mettre le text a gauche  */
         word-spacing: normal;
         hyphens: auto;
-        width: 100%; /* Largeur de l'élément prend 100% de la largeur de l'écran */
+        width: 150%; /* Largeur de l'élément prend 100% de la largeur de l'écran */
+       margin-left: -25px;
+        
          
+}
+.justifytext h1 {
+    font-size: 30px;
 }
  
  
@@ -245,7 +250,7 @@ font-size: 70px;
 }
 
     .justifytext h1 {
-        font-size: 50px;
+        font-size: 40px;
         margin-left: 40px;
         margin-bottom: 30px;
         color:#dfb16d;
