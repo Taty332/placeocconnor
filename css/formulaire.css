@@ -120,39 +120,39 @@ text-decoration: none;
  
 .container {
       /* Utilisation de 90% pour qu'elle s'adapte aux tailles d'écran */
-   margin-left: 5%;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    display: flex;
-    gap: 5%;
-     margin-top: 5%;
-    margin-right: 5%;
-  background-color: #F5F5F5;
+margin-left: 5%;
+padding: 25px;
+border-radius: 8px;
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+display: flex;
+gap: 5%;
+margin-top: 5%;
+margin-right: 5%;
+background-color: #F5F5F5;
  
 }
 .form{
   
-    width: 50%;
+width: 50%;
 padding: 2%;
+flex: 1;
 }
-    .container h1{
-        text-align:center;
-        color: #dfb16d;
-    }
-
-    .container .form {
-        margin-top: 30px;
-    }
+.container h1{
+    text-align:center;
+    color: #dfb16d;
+}
+.container .form {
+    margin-top: 30px;
+}
 
 .input-box {
     width: 100%;
     margin-top: 20px;
 }
 
-    .input-box label {
-        color: #333;
-    }
+.input-box label {
+    color: #333;
+}
 
 .form .input-box input {
     width: 100%;
@@ -224,7 +224,7 @@ padding: 2%;
     }
 
     .infos {
-        max-width: 350px;
+       
         flex: 1;
         margin-left: 20px;
        
@@ -336,7 +336,12 @@ footer {
     .container {
         width: 90%;
         padding: 15px;
+        flex-direction: column;
     }
+
+    .form{
+  
+        width: 100%;}
 
     .form .column {
         flex-direction: column;
