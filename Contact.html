@@ -33,14 +33,14 @@
 
    
     <section  id="text" class="container">
-   
-        <form action="#" class="form">
+        <form action="https://formsubmit.co/Info@PlaceOconnor.ca" method="POST" class="form">
+            <input type="hidden" name="_cc" value="Elio@PlaceOconnor.ca,Natalie@PlaceOconnor.ca">
             <div class="gender-box">
                 <h3>Desired size</h3>
                 <div class="gender-option">
                     <div class="gender">
                         <input type="radio" id="check-male" name="gender" checked />
-                        <label for="check-male">Loaf</label>
+                        <label for="check-male">Loft</label>
                     </div>
                     <div class="gender">
                         <input type="radio" id="check-female" name="gender" />
@@ -57,26 +57,26 @@
             
             <div class="input-box">
                 <label for="">Full Name</label>
-                <input type="text" placeholder="Enter full name" required />
+                <input type="text" name="name" placeholder="Enter full name" required />
            </div>
 
             <div class="input-box">
                 <label for="">E-Mail</label>
-                <input type="text" placeholder="Enter e-mail address" required />
+                <input type="text" name="email" placeholder="Enter e-mail address" required />
             </div>
 
             <div class="column">
                 <div class="input-box">
                     <label for="">Phone</label>
-                    <input type="number" placeholder="Enter phone number" required>
+                    <input type="number" name="phone" placeholder="Enter phone number" required>
                 </div>
             </div>
             <div class="input-box adress">
                 <label for="">Message</label>
-                <textarea id="labelmessage" placeholder="Enter a message" required></textarea>
+                <textarea id="labelmessage" name="message" placeholder="Enter a message" required></textarea>
 
             </div>
-            <button>Submit</button>
+            <button type="submit">Submit</button>
         </form>
     
                     <!-- Informations à droite -->
@@ -86,21 +86,23 @@
             <div class="contacteznous">
                 <div class="imagecontact">
                     <img src="image/eli.jpg" alt="Titre de l'image" />
-                    <p>Elio BARCHICHAT<br> Elio@PlaceOconnor.ca </p>
+                    <p>
+                        ELIO Barchichat<br><img src="image/courrier.png" alt="Email" style="width: 15px; height: 15px;"><a href="mailto:Elio@PlaceOconnor.ca"> Elio@PlaceOconnor.ca </a> <br>
+                        <img src="image/téléphone1.png" alt="Téléphone" style="width: 20px; height: 20px;">514-562-2903
+                    </p>
+                    <p>
+                        <br><br><br><br>
+                        For more information: <br>
+                        <img src="image/courrier.png" alt="Email" style="width: 15px; height: 15px;"><a href="mailto:Info@PlaceOconnor.ca"> Info@PlaceOconnor.ca </a> <br>
+                    </p>
                 </div>
 
-                <div class="imagecontact">
-                    <img src="image/nathalie.jpg" alt="Titre de l'image" />
-                    <p class="image-title">Natalie GREENSPOON <br> Natalie@PlaceOconnor.ca </p>
+                <div class="imagecontact imgnat">
+                    <img src="image/nathalie.jpg" alt="Titre de l'image"/>
+                    <p class="image-title">NATALIE Greenspoon<br><img src="image/courrier.png" alt="Email" style="width: 15px; height: 15px;"><a href="mailto:Natalie@PlaceOconnor.ca.ca"> Natalie@PlaceOconnor.ca </a></p>
                 </div>
+               </div>
             </div>
-            <br><br>
-            <p>For more information: <br> 
-            <img src="image/courrier.png" alt="Email" style="width: 20px; height: 20px;"> : <a href="mailto Info@PlaceOconnor.ca">  Info@PlaceOconnor.ca </a> <br>
-            <img src="image/téléphone1.png" alt="Téléphone" style="width: 20px; height: 20px;">   : 514-562-2903   </p>
-
-
-        </div>
 
     </section>
     <script>

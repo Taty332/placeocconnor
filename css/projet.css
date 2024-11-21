@@ -97,8 +97,8 @@ header {
   
 
 
-@media screen and (max-width: 901px) {
-    .navbar {
+    @media screen and (max-width:  768px) {
+        .navbar {
         padding: 0;
     }
     .navbar a {
@@ -163,12 +163,32 @@ header {
         align-items: center;
     }
 
-    .formulaire,
+    .container2 {
+        flex-direction: column;
+    }
+   
+    
     .infos {
-        max-width: 100%;
+
+        /* max-width: 100%; */
+        
         text-align: center;
         margin-bottom: 20px;
     }
+
+    .infos h3 {
+        font-size: 15px;
+        word-break: keep-all;
+        display: block;
+        
+    }
+        
+    
+        .imagecontact img {
+            max-width: 120px; /* Réduit la taille maximale sur petits écrans */
+        }
+     
+       
     .justifytext p {
         text-align: justify; /*mettre le text a gauche  */
         word-spacing: normal;
@@ -181,9 +201,19 @@ header {
 .justifytext h1 {
     font-size: 30px;
 }
- 
- 
+.imgdeco {
+    flex-direction:column;
 }
+    .imgdeco img {
+        width: 100vw; /* Les images prennent toute la largeur */
+        height: auto; /* Ajuste la hauteur automatiquement */
+    }
+}
+
+          
+  
+
+
 /* Carousel Container */
 .carousel {
     position: relative;
@@ -409,29 +439,34 @@ font-size: 70px;
 .color{
     color: white;
     margin-top: 2%;
-    font-size: 12px;
+    font-size: 14px;
+text-align: center;
    
     
 }
 
 .container2 {
     display: flex;
-    justify-content: space-between;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
+    /* justify-content: space-between; */
+    /* max-width: 1100px; */
+    margin: 10px;
+    padding: 0 10px;
     flex-wrap: wrap; /* Permet aux �l�ments de se r�organiser sur les petits �crans */
+    gap: 5%;
     
 }
 
 /* Formulaire */
 .formulaire {
-    flex: 1;
-    margin-right: 20px; /* Espacement entre le formulaire et les infos */
+    
+     /* Espacement entre le formulaire et les infos */
     background-color: whitesmoke;
     margin-left: 10px;
-    padding: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     border-radius: 05px;
+    /* width: 55%; */
+    flex: 1;
 }
 
     .formulaire h1 {
@@ -588,38 +623,42 @@ button {
 
 
 .infos {
-    max-width: 350px;
-    flex: 1;
-    margin-left: 20px;
+   
+    width: 35%;
+    /* flex: 1; */
+    
 }
 
     .infos h3 {
-        font-size: 1.5rem;
+        font-size: 20px;
         color: #dfb16d;
         margin-bottom: 20px;
+        text-align: center;
+        font-weight: bold;
     }
-
+    
 
 .contacteznous {
     display: flex; /* Active Flexbox */
-    justify-content: space-between; /* Espace entre les images */
-
-    gap: 35%; /* Espace entre les images */
+    /* justify-content: space-between; Espace entre les images */
+      gap: 5%; /*Espace entre les images */
     /* flex-wrap: wrap; Permet aux images de passer à la ligne sur les petits écrans */
-    max-width: 100%; /* S'assure que le conteneur ne dépasse pas la largeur de l'écran */
+    /* max-width: 100%; S'assure que le conteneur ne dépasse pas la largeur de l'écran */
 }
 
 .imagecontact {
-    flex: 1 1 45%; /* Définit une largeur flexible pour chaque image */
+    /* Définit une largeur flexible pour chaque image */
     text-align: center; /* Centre le texte sous les images */
     box-sizing: border-box; /* Inclut le padding et les bordures dans la largeur totale */
+
+    /* margin-left: -30%; */
 }
 
     .imagecontact img {
-        width: 100%; /* Prend toute la largeur de son conteneur (flex) */
-        max-width: 150px; /* Limite la largeur maximale de l'image */
-        height: auto; /* Garde les proportions des images */
-        border-radius: 5px; /* Ajoute des coins arrondis */
+        width: 45%; /* Prend toute la largeur de son conteneur (flex) */
+        /* max-width: 150px; Limite la largeur maximale de l'image */
+        height: 60%; /* Garde les proportions des images */
+        border-radius: 10px; /* Ajoute des coins arrondis */
     }
 
 
@@ -629,18 +668,8 @@ button {
     margin: 5px 0;
 }
 
-@media (max-width: 768px) {
-    .contacteznous {
-        flex-direction: column; /* Empile les images sur petits écrans */
-    }
-
-    .imagecontact {
-        flex: 1 1 100%; /* Chaque image prend toute la largeur disponible */
-    }
-
-        .imagecontact img {
-            max-width: 120px; /* Réduit la taille maximale sur petits écrans */
-        }
+.paragforme{
+    text-align: center;
 }
 
 
@@ -657,3 +686,14 @@ button {
         transform: translateY(0); /* Remettre le texte � sa position d'origine */
     }
 
+    
+@media (max-width: 768px) {
+        
+    .imgdeco {
+        flex-direction:column;
+    }
+        .imgdeco img {
+            width: 100%; /* Les images prennent toute la largeur */
+            height: auto; /* Ajuste la hauteur automatiquement */
+        }
+}

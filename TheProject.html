@@ -38,7 +38,7 @@
         <div class="carousel">
 
             <!-- Slide 1 -->
-            <div class="slide">
+            <div class="slide active">
                 <img src="image/build.png">
              
                 <div class="text">
@@ -59,7 +59,7 @@
                 </div>
             </div>
             <!-- Slide 2 -->
-            <div class="slide active">
+            <div class="slide">
                 <img src="image/eau.jpg" alt="Image 2">
                
                 <div class="text">
@@ -158,13 +158,14 @@
             <!-- Formulaire à gauche -->
             <div class="formulaire">
                 <h1>Contact us</h1><br> 
-                <form action="#" class="form">
+                <form action="https://formsubmit.co/Info@PlaceOconnor.ca" method="POST" class="form">
+                    <input type="hidden" name="_cc" value="Elio@PlaceOconnor.ca,Natalie@PlaceOconnor.ca">
                     <div class="gender-box">
                         <h3>Desired size</h3><br>
                         <div class="gender-option">
                             <div class="gender">
                                 <input type="radio" id="check-male" name="gender" checked />
-                                <label for="check-male">Loaf</label>
+                                <label for="check-male">Loft</label>
                             </div>
                             <div class="gender">
                                 <input type="radio" id="check-female" name="gender" />
@@ -179,18 +180,18 @@
                     </div>
                     <div class="input-box">
                         <label for="">Full Name</label>
-                        <input type="text" placeholder="Enter full name" required />
+                        <input type="text" name="name" placeholder="Enter full name" required />
                     </div>
 
                     <div class="input-box">
                         <label for="">E-Mail</label>
-                        <input type="text" placeholder="Enter e-mail address" required />
+                        <input type="text" name="email" placeholder="Enter e-mail address" required />
                     </div>
 
                     <div class="input-box">
                         <div class="input-box">
                             <label for="">Phone</label>
-                            <input type="number" placeholder="Enter phone number" required>
+                            <input type="number" name="phone" placeholder="Enter phone number" required>
                         </div>
                     </div>
 
@@ -198,7 +199,7 @@
                     <div class="input-box adress">
 
                         <label for="">Message</label>
-                        <textarea id="labelmessage" placeholder="Enter a message" required></textarea>
+                        <textarea id="labelmessage" name="message" placeholder="Enter a message" required></textarea>
                     </div>
 
                     <button type="submit">Submit</button>
@@ -207,25 +208,30 @@
 
             <!-- Informations à droite -->
             <div class="infos">
-                <h3>Contact our team:</h3><br />
+                <h3>Contact our team: </h3><br />
                 <div class="contacteznous">
                     <div class="imagecontact">
                         <img src="image/eli.jpg" alt="Titre de l'image" />
-                        <p>Elio BARCHICHAT<br> Elio@PlaceOconnor.ca </p>
+        <p>ELIO Barchichat<br><img src="image/mail.png" alt="Email" style="width: 20px; height: 20px;"> : <a href="mailto:Elio@PlaceOconnor.ca"> Elio@PlaceOconnor.ca </a> </p>
+        <img src="image/telephone.png" alt="Téléphone" style="width: 20px; height: 20px;"> : <a href="tel:+15145622903">514-562-2903</a><br>
                     </div>
 
-                    <div class="imagecontact">
+            <div class="imagecontact">
                         <img src="image/nathalie.jpg" alt="Titre de l'image" />
-                        <p class="image-title">Natalie GREENSPOON <br> Natalie@PlaceOconnor.ca </p>
-                    </div>
+        <p>NATALIE Greenspoon <br>
+        <img src="image/mail.png" alt="Email" style="width: 20px; height: 20px;"> : <a href="mailto:Natalie@PlaceOconnor.ca ">Natalie@PlaceOconnor.ca </a></p>
+
+            </div>
                 </div>
                 <br><br>
-                <p>For more information: <br> 
+                <p class="paragforme">For more information : <br> 
                 <img src="image/mail.png" alt="Email" style="width: 20px; height: 20px;"> : <a href="mailto Info@PlaceOconnor.ca">  Info@PlaceOconnor.ca </a> <br>
                 <img src="image/telephone.png" alt="Téléphone" style="width: 20px; height: 20px;">   : 514-562-2903   </p>
 
 
             </div>
+           
+        </div>
             <p class="color">
                 Place O'Connor 2024 | All images and finishes shown on this website are for illustrative purposes only and subject to change without notice.
             </p>

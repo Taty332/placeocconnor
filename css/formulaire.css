@@ -281,8 +281,8 @@ footer {
 .color{
     color: white;
     margin-top: 2%;
-    font-size: 12px;
-       
+    font-size: 14px;
+text-align: center;
 }
 /* Media Query pour mobile */
 @media screen and (max-width: 901px) {
