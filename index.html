@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="FR">
 
 <head>
     <meta charset="UTF-8">
@@ -40,7 +40,7 @@
             <!-- Slide 1 -->
             <div class="slide active">
                 <img src="image/build.png">
-             
+
                 <div class="text">
                     <div>
                         <h1>Place O'Connor<br></h1>
@@ -63,7 +63,7 @@
             <!-- Slide 2 -->
             <div class="slide">
                 <img src="image/eau.jpg" alt="Image 2">
-               
+
                 <div class="text">
                     <div>
                         <h1>Place O'Connor <br></h1>
@@ -86,7 +86,7 @@
             <!-- Slide 3 -->
             <div class="slide">
                 <img src="image/Chateaugay.png" alt="Image 3">
-          
+
                 <div class="text">
                     <div>
                         <h1>Place O'Connor<br></h1>
@@ -108,7 +108,7 @@
             </div>
 
             <!-- Navigation Buttons -->
-          
+
 
         </div>
 
@@ -166,8 +166,12 @@
     </div>
 
     <div class="imgdeco">
+      <div class="enfant_deco">
         <img src="image/deco.jpg" alt="Alternate Text" />
-        <img src="image/deco2.jpg"  alt="Alternate Text" />
+      </div>  
+       <div class="enfant_deco">
+        <img src="image/deco2.jpg" alt="Alternate Text" />
+       </div> 
     </div>
 
 
@@ -176,7 +180,7 @@
         <div class="container2">
             <!-- Formulaire à gauche -->
             <div class="formulaire">
-                <h1>Contactez-nous</h1><br> 
+                <h1>Contactez-nous</h1><br>
                 <form action="https://formsubmit.co/Info@PlaceOconnor.ca" method="POST" class="form">
                     <input type="hidden" name="_cc" value="Elio@PlaceOconnor.ca,Natalie@PlaceOconnor.ca">
                     <div class="gender-box">
@@ -218,7 +222,8 @@
                     <div class="input-box adress">
 
                         <label for="">Message</label>
-                        <textarea id="labelmessage" name="message" placeholder="Entrer votre message" required></textarea>
+                        <textarea id="labelmessage" name="message" placeholder="Entrer votre message"
+                            required></textarea>
                     </div>
 
                     <button type="submit">Envoyer</button>
@@ -231,29 +236,35 @@
                 <div class="contacteznous">
                     <div class="imagecontact">
                         <img src="image/eli.jpg" alt="Titre de l'image" />
-        <p>ELIO Barchichat<br><img src="image/mail.png" alt="Email" style="width: 20px; height: 20px;"> : <a href="mailto:Elio@PlaceOconnor.ca"> Elio@PlaceOconnor.ca </a> </p>
-        <img src="image/telephone.png" alt="Téléphone" style="width: 20px; height: 20px;"> : <a href="tel:+15145622903">514-562-2903</a><br>
+                        <p>ELIO Barchichat<br><img src="image/mail.png" alt="Email" style="width: 15px; height: 15px;">: 
+                            <a href="mailto:Elio@PlaceOconnor.ca"> Elio@PlaceOconnor.ca </a> 
+                        </p>
+                        <img src="image/telephone.png" alt="Téléphone" style="width: 20px; height: 20px;"> 
+                        <a href="tel:+15145622903"> : 514-562-2903</a><br>
                     </div>
 
                     <div class="imagecontact">
                         <img src="image/nathalie.jpg" alt="Titre de l'image" />
-        <p>NATALIE Greenspoon <br>
-        <img src="image/mail.png" alt="Email" style="width: 20px; height: 20px;"> : <a href="mailto:Natalie@PlaceOconnor.ca ">Natalie@PlaceOconnor.ca </a></p>
-
+                        <p>NATALIE Greenspoon <br>
+                            <img src="image/mail.png" alt="Email" style="width: 15px; height: 15px;">: 
+                            <a href="mailto:Natalie@PlaceOconnor.ca ">Natalie@PlaceOconnor.ca </a>
+                        </p>
                     </div>
                 </div>
                 <br><br>
-                <p class="paragforme">Pour plus d'informations: <br> 
-                <img src="image/mail.png" alt="Email" style="width: 20px; height: 20px;"> : <a href="mailto Info@PlaceOconnor.ca">  Info@PlaceOconnor.ca </a> <br>
-                <img src="image/telephone.png" alt="Téléphone" style="width: 20px; height: 20px;">   : 514-562-2903   </p>
+                <p class="paragforme">Pour plus d'informations: <br>
+                    <img src="image/mail.png" alt="Email" style="width: 15px; height: 15px;"> : <a
+                        href="mailto Info@PlaceOconnor.ca"> Info@PlaceOconnor.ca </a> <br>
+                        
+                </p>
 
 
             </div>
-           
+
         </div>
         <p class="color">
             Place O'Connor 2024 | Toutes les images et finis présentés dans ce site web sont à titre indicatif
-            seulement et sujettes à changement sans préavis.  
+            seulement et sujettes à changement sans préavis.
         </p>
     </footer>
 
@@ -288,27 +299,27 @@
         });
     </script>
     <!--  DEBUT Défilements des images en haut-->
-<script>
-    let slideIndex = 0;
-            const slides = document.querySelectorAll('.slide');
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
 
-            function showSlide(index) {
-                slides.forEach((slide, i) => {
-                    slide.classList.remove('active');
-                    if (i === index) slide.classList.add('active');
-                });
-            }
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) slide.classList.add('active');
+            });
+        }
 
-            function moveSlide(direction) {
-                slideIndex = (slideIndex + direction + slides.length) % slides.length;
-                showSlide(slideIndex);
-            }
+        function moveSlide(direction) {
+            slideIndex = (slideIndex + direction + slides.length) % slides.length;
+            showSlide(slideIndex);
+        }
 
-            // Auto play slides every 5 seconds
-            setInterval(() => {
-                moveSlide(1);
-            }, 4000);
-</script>
+        // Auto play slides every 5 seconds
+        setInterval(() => {
+            moveSlide(1);
+        }, 4000);
+    </script>
     <!--  DEBUT Défilements des images en haut-->
 
 </body>

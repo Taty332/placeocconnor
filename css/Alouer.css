@@ -502,9 +502,7 @@ th img {
     animation: fadeIn 1.5s ease forwards;
 }
 /* Navigation Arrows */
-.carousel .prev, .carousel .next {
-  
-}
+
  
 
 .text a{
@@ -715,27 +713,20 @@ text-align: center;
 
 .container2 {
     display: flex;
-    /* justify-content: space-between; */
-    /* max-width: 1100px; */
     margin: 10px;
     padding: 0 10px;
-    flex-wrap: wrap; /* Permet aux �l�ments de se r�organiser sur les petits �crans */
-    gap: 5%;
-    
+    flex-wrap: wrap; 
+    gap: 3%; 
 }
-
 
 /* Formulaire */
 .formulaire {
-    
-    /* Espacement entre le formulaire et les infos */
-   background-color: whitesmoke;
-   margin-left: 10px;
-   padding-top: 15px;
-   padding-bottom: 15px;
-   border-radius: 05px;
-   /* width: 55%; */
-   flex: 1;
+    background-color: whitesmoke;
+    margin-left: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 05px;
+    flex: 2;
 }
 
    .formulaire h1 {
@@ -886,56 +877,42 @@ button {
    button:hover {
        background-color: #777;
    }
-/* Informations */
 
-
-
+   /* Informations contact*/
 .infos {
-   
-    width: 35%;
-    /* flex: 1; */
-    
+    flex: 1;
+    padding: 1%;
+    margin-top: 1%;
 }
-
     .infos h3 {
-        font-size: 20px;
+        font-size: 25px;
         color: #dfb16d;
         margin-bottom: 20px;
         text-align: center;
         font-weight: bold;
     }
-    
+.contacteznous {
+    display: flex; 
+    gap: 5%;   
+}
 
+.imagecontact {
+ 
+    text-align: center;
+    box-sizing: border-box; 
+}
 
-    .contacteznous {
-        display: flex; /* Active Flexbox */
-        /* justify-content: space-between; Espace entre les images */
-          gap: 5%; /*Espace entre les images */
-        /* flex-wrap: wrap; Permet aux images de passer à la ligne sur les petits écrans */
-        /* max-width: 100%; S'assure que le conteneur ne dépasse pas la largeur de l'écran */
+    .imagecontact img {
+        width: 45%;
+        height: 60%; 
+        border-radius: 10px;
     }
-    
-    .imagecontact {
-        /* Définit une largeur flexible pour chaque image */
-        text-align: center; /* Centre le texte sous les images */
-        box-sizing: border-box; /* Inclut le padding et les bordures dans la largeur totale */
-    
-        /* margin-left: -30%; */
-    }
-    
-        .imagecontact img {
-            width: 45%; /* Prend toute la largeur de son conteneur (flex) */
-            /* max-width: 150px; Limite la largeur maximale de l'image */
-            height: 60%; /* Garde les proportions des images */
-            border-radius: 10px; /* Ajoute des coins arrondis */
-        }
-    
-    
-    .infos p {
-        font-size: 1rem;
-        color: #ccc;
-        margin: 5px 0;
-    }
+
+.infos p {
+    font-size: 15px;
+    color: #ccc;
+    margin: 5px 0;
+}
     
     .paragforme{
         text-align: center;
@@ -947,11 +924,7 @@ button {
   
 
 
-.infos p {
-    font-size: 1rem;
-    color: #ccc;
-    margin: 5px 0;
-}
+
 /* code des options*/
 /* Conteneur principal */
 .conteneur {
@@ -1097,6 +1070,7 @@ button {
         flex: 1 1 100%;
     }
 }
+
 @media (max-width: 992px) {
     .gallery {
         grid-template-columns: repeat(3, 1fr);
@@ -1114,4 +1088,5 @@ button {
         grid-template-columns: 1fr;
     }
 }
+
 
