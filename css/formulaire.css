@@ -18,10 +18,15 @@ body {
 header {
     height: 100vh;
     width: 100vw;
-    background-size: contain;/* Pour que l'image soit entièrement visible */
+    background-position: center;
+    /* background-size: contain;Pour que l'image soit entièrement visible */
+    
+    background: url(../image/file.jpg) no-repeat center center;
     background-size: cover;
-    background-repeat:no-repeat;
-    background: url(../image/entete-contact.jpg);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     margin: 0;
     
  }
@@ -138,8 +143,11 @@ padding: 2%;
 flex: 1;
 }
 .container h1{
-    text-align:center;
+    text-align:left;
     color: #dfb16d;
+    font-size: 40px;
+       margin-bottom: 20px;
+     font-weight: bold;
 }
 .container .form {
     margin-top: 30px;
@@ -227,6 +235,7 @@ flex: 1;
        
         flex: 1;
         margin-left: 20px;
+        margin-top: 3%;
        
     }
     
@@ -234,22 +243,27 @@ flex: 1;
             font-size: 1.5rem;
             color: #dfb16d;
             margin-bottom: 20px;
+            text-align: center;
+            
+        
+           
         }
     
     
     .contacteznous {
         display: flex; /* Active Flexbox */
-        justify-content: space-between; /* Espace entre les images */
-    
-        gap: 35%; /* Espace entre les images */
-        /* flex-wrap: wrap; Permet aux images de passer à la ligne sur les petits écrans */
-        max-width: 100%; /* S'assure que le conteneur ne dépasse pas la largeur de l'écran */
     }
     
     .imagecontact {
-        flex: 1 1 45%; /* Définit une largeur flexible pour chaque image */
+        /* flex: 1 ; Définit une largeur flexible pour chaque image */
+        margin: 3%;
         text-align: center; /* Centre le texte sous les images */
         box-sizing: border-box; /* Inclut le padding et les bordures dans la largeur totale */
+    }
+    .imagecontact2 {
+     text-align: left;
+    padding-left: 5%;
+     
     }
     
         .imagecontact img {
@@ -285,6 +299,16 @@ footer {
        
 }
 /* Media Query pour mobile */
+ 
+    
+ 
+@media (max-width:768PX) {
+
+    header{
+        background-position: center;
+    }
+    
+}
 @media screen and (max-width: 901px) {
     .navbar {
         padding: 0;
@@ -354,6 +378,7 @@ footer {
 
    header{
     margin-bottom: 16%;
+    background-position: top;
    }
 
    .text h1{
